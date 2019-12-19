@@ -51,7 +51,7 @@ for index, row in df_predicted_labels.iterrows():  # itterate over each image an
             elif ~pd.isna(im_rows__predicted[x]) and pd.isna(im_rows__gold[x]):  # False positive
                 false_pos[x] += 1  # false positive for class x was generated on image.
             elif pd.isna(im_rows__predicted[x]) and pd.isna(im_rows__gold[x]):  # == "nan" and im_rows__gold[x] == 'nan':  # (shouldn't ever occur)
-                print("impossible occured")
+                print("impossible occurred")
                 true_neg[x] += 1
             else:
                 true_pos[x] += 1
